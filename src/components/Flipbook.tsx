@@ -3,6 +3,13 @@ import HTMLFlipBook from "react-pageflip";
 import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, Grid3x3, Play, Volume2, Share2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import charcoalHero from "@/assets/charcoal-hero.jpg";
+import factoryInterior from "@/assets/factory-interior.jpg";
+import sustainability from "@/assets/sustainability.jpg";
+import productionProcess from "@/assets/production-process.jpg";
+import certifications from "@/assets/certifications.jpg";
+import warehouse from "@/assets/warehouse.jpg";
+import productShowcase from "@/assets/product-showcase.jpg";
 
 interface FlipbookProps {
   className?: string;
@@ -81,24 +88,29 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           swipeDistance={50}
         >
           {/* Cover Page */}
-          <div className="page bg-white shadow-2xl">
-            <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-green-500 to-green-600 text-white relative overflow-hidden">
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute inset-0 bg-black/30"></div>
-              </div>
-              <div className="text-center p-8 relative z-10">
+          <div className="page bg-white shadow-2xl relative overflow-hidden">
+            <img 
+              src={charcoalHero} 
+              alt="Premium Coconut Shell Charcoal" 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-green-600/90 to-green-800/90"></div>
+            <div className="h-full w-full flex items-center justify-center text-white relative z-10">
+              <div className="text-center p-8">
                 <div className="mb-6">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-4xl">🔥</span>
+                  <div className="w-32 h-32 mx-auto mb-6 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-4 border-white/30">
+                    <span className="text-6xl">🔥</span>
                   </div>
-                  <h1 className="text-3xl font-bold mb-2">CV SURYA GRISSE</h1>
+                  <h1 className="text-4xl font-bold mb-2 tracking-wide">CV SURYA GRISSE</h1>
                 </div>
-                <h2 className="text-5xl font-bold mb-6">PABRIK ARANG</h2>
-                <h3 className="text-4xl font-bold mb-6">BERKUALITAS</h3>
-                <p className="text-xl opacity-90 max-w-md mx-auto">
-                  Menghasilkan arang premium berkualitas ekspor dengan proses ramah lingkungan
-                </p>
-                <div className="mt-8 text-sm opacity-75">
+                <h2 className="text-6xl font-bold mb-4 tracking-tight">PABRIK ARANG</h2>
+                <h3 className="text-5xl font-bold mb-8 tracking-tight">BERKUALITAS</h3>
+                <div className="max-w-2xl mx-auto mb-8">
+                  <p className="text-2xl opacity-95 leading-relaxed">
+                    Menghasilkan arang premium berkualitas ekspor dengan proses ramah lingkungan
+                  </p>
+                </div>
+                <div className="mt-12 text-lg opacity-80 animate-pulse">
                   Click to explore →
                 </div>
               </div>
@@ -106,39 +118,48 @@ export const Flipbook = ({ className }: FlipbookProps) => {
           </div>
 
           {/* Page 1 - Pengenalan */}
-          <div className="page bg-white shadow-2xl p-10">
-            <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PENGENALAN</h1>
-            <div className="mt-8 space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                <span className="font-bold text-green-600">CV Surya Grisse</span> adalah perusahaan produsen arang batok kelapa pertama di Indonesia yang mengedepankan kualitas terbaik dengan teknologi ramah lingkungan serta didukung pengalaman lebih dari 15 tahun di bidangnya.
-              </p>
-              
-              <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-                <h3 className="font-bold text-gray-800 mb-3 text-xl">Mengapa Memilih Kami?</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-500 font-bold">✓</span>
-                    <span>Pengalaman lebih dari 15 tahun</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-500 font-bold">✓</span>
-                    <span>Kualitas premium berkualitas ekspor</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-500 font-bold">✓</span>
-                    <span>Teknologi ramah lingkungan</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-500 font-bold">✓</span>
-                    <span>Standar produksi internasional</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mt-6 p-4 bg-gradient-to-r from-green-500 to-green-600 rounded-lg text-white">
-                <p className="text-center font-semibold">
-                  Dipercaya oleh berbagai perusahaan besar di Indonesia dan internasional
+          <div className="page bg-white shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/2 h-full">
+              <img 
+                src={sustainability} 
+                alt="Sustainable Coconut Farm" 
+                className="w-full h-full object-cover opacity-30"
+              />
+            </div>
+            <div className="relative z-10 p-10">
+              <h1 className="text-5xl font-bold mb-8 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PENGENALAN</h1>
+              <div className="mt-8 space-y-6 max-w-xl">
+                <p className="text-xl text-gray-700 leading-relaxed font-medium">
+                  <span className="font-bold text-green-600 text-2xl">CV Surya Grisse</span> adalah perusahaan produsen arang batok kelapa pertama di Indonesia yang mengedepankan kualitas terbaik dengan teknologi ramah lingkungan serta didukung pengalaman lebih dari 15 tahun di bidangnya.
                 </p>
+                
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200 shadow-lg">
+                  <h3 className="font-bold text-gray-800 mb-4 text-2xl">Mengapa Memilih Kami?</h3>
+                  <ul className="space-y-3 text-gray-700 text-lg">
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 font-bold text-2xl">✓</span>
+                      <span>Pengalaman lebih dari 15 tahun</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 font-bold text-2xl">✓</span>
+                      <span>Kualitas premium berkualitas ekspor</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 font-bold text-2xl">✓</span>
+                      <span>Teknologi ramah lingkungan</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500 font-bold text-2xl">✓</span>
+                      <span>Standar produksi internasional</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mt-6 p-5 bg-gradient-to-r from-green-500 to-green-600 rounded-xl text-white shadow-lg">
+                  <p className="text-center font-bold text-lg">
+                    Dipercaya oleh berbagai perusahaan besar di Indonesia dan internasional
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -177,38 +198,42 @@ export const Flipbook = ({ className }: FlipbookProps) => {
 
           {/* Page 3 - Pabrik Kami */}
           <div className="page bg-white shadow-2xl p-10">
-            <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PABRIK KAMI</h1>
+            <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PABRIK KAMI</h1>
             
             <div className="mt-6 space-y-6">
-              <div className="bg-gray-100 h-48 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400 text-lg">🏭 Foto Pabrik</p>
+              <div className="rounded-xl overflow-hidden shadow-2xl">
+                <img 
+                  src={factoryInterior} 
+                  alt="Factory Interior" 
+                  className="w-full h-64 object-cover"
+                />
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-gray-800">Kualitas Arang Terbaik</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <h2 className="text-3xl font-bold text-gray-800">Kualitas Arang Terbaik</h2>
+                <p className="text-lg text-gray-700 leading-relaxed">
                   Setiap proses produksi kami dilakukan dengan standar tinggi dan teknologi modern yang menjaga mutu, efisiensi, serta ramah lingkungan.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <div className="text-3xl mb-2">⚡</div>
-                    <h3 className="font-bold text-gray-800 mb-1">Teknologi Modern</h3>
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border-2 border-green-200 shadow-md">
+                    <div className="text-4xl mb-2">⚡</div>
+                    <h3 className="font-bold text-gray-800 mb-1 text-lg">Teknologi Modern</h3>
                     <p className="text-sm text-gray-600">Peralatan produksi terkini</p>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <div className="text-3xl mb-2">🌱</div>
-                    <h3 className="font-bold text-gray-800 mb-1">Ramah Lingkungan</h3>
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-xl border-2 border-blue-200 shadow-md">
+                    <div className="text-4xl mb-2">🌱</div>
+                    <h3 className="font-bold text-gray-800 mb-1 text-lg">Ramah Lingkungan</h3>
                     <p className="text-sm text-gray-600">Proses berkelanjutan</p>
                   </div>
-                  <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                    <div className="text-3xl mb-2">🏆</div>
-                    <h3 className="font-bold text-gray-800 mb-1">Standar Tinggi</h3>
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-5 rounded-xl border-2 border-orange-200 shadow-md">
+                    <div className="text-4xl mb-2">🏆</div>
+                    <h3 className="font-bold text-gray-800 mb-1 text-lg">Standar Tinggi</h3>
                     <p className="text-sm text-gray-600">Kualitas terjamin</p>
                   </div>
-                  <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                    <div className="text-3xl mb-2">👷</div>
-                    <h3 className="font-bold text-gray-800 mb-1">Tim Profesional</h3>
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-xl border-2 border-purple-200 shadow-md">
+                    <div className="text-4xl mb-2">👷</div>
+                    <h3 className="font-bold text-gray-800 mb-1 text-lg">Tim Profesional</h3>
                     <p className="text-sm text-gray-600">Tenaga ahli berpengalaman</p>
                   </div>
                 </div>
@@ -218,103 +243,131 @@ export const Flipbook = ({ className }: FlipbookProps) => {
 
           {/* Page 4 - Produksi */}
           <div className="page bg-white shadow-2xl p-10">
-            <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PRODUKSI</h1>
+            <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">PRODUKSI</h1>
             
-            <div className="mt-6 space-y-4">
-              <div className="bg-gray-100 h-32 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">📸 Proses Produksi 1</p>
+            <div className="mt-6 space-y-5">
+              <div className="rounded-xl overflow-hidden shadow-2xl">
+                <img 
+                  src={productionProcess} 
+                  alt="Production Process" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
-              <div className="bg-gray-100 h-32 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">📸 Proses Produksi 2</p>
+              <div className="rounded-xl overflow-hidden shadow-2xl">
+                <img 
+                  src={warehouse} 
+                  alt="Warehouse Storage" 
+                  className="w-full h-48 object-cover"
+                />
               </div>
 
-              <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200 mt-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-3">Proses Produksi Berkualitas</h2>
-                <p className="text-gray-700 leading-relaxed mb-4">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200 shadow-lg mt-6">
+                <h2 className="text-2xl font-bold text-gray-800 mb-3">Proses Produksi Berkualitas</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   Kami menggunakan teknologi modern dalam setiap tahap produksi untuk menghasilkan arang batok kelapa berkualitas premium.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm font-medium">Seleksi Bahan</span>
-                  <span className="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm font-medium">Pembakaran</span>
-                  <span className="px-3 py-1 bg-orange-200 text-orange-800 rounded-full text-sm font-medium">Pendinginan</span>
-                  <span className="px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm font-medium">Quality Control</span>
-                  <span className="px-3 py-1 bg-pink-200 text-pink-800 rounded-full text-sm font-medium">Packaging</span>
+                  <span className="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-bold shadow-md">Seleksi Bahan</span>
+                  <span className="px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-bold shadow-md">Pembakaran</span>
+                  <span className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-bold shadow-md">Pendinginan</span>
+                  <span className="px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-bold shadow-md">Quality Control</span>
+                  <span className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm font-bold shadow-md">Packaging</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Page 5 - Keunggulan Produk */}
-          <div className="page bg-white shadow-2xl p-10">
-            <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">KEUNGGULAN PRODUK</h1>
-            
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Komitmen kami adalah menghadirkan produk arang berkualitas tinggi yang ramah lingkungan dan siap untuk berbagai kebutuhan industri maupun rumah tangga.
-            </p>
+          <div className="page bg-white shadow-2xl relative overflow-hidden">
+            <div className="absolute right-0 top-0 w-1/3 h-full opacity-20">
+              <img 
+                src={productShowcase} 
+                alt="Product Showcase" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative z-10 p-10">
+              <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">KEUNGGULAN PRODUK</h1>
+              
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed font-medium max-w-2xl">
+                Komitmen kami adalah menghadirkan produk arang berkualitas tinggi yang ramah lingkungan dan siap untuk berbagai kebutuhan industri maupun rumah tangga.
+              </p>
 
-            <div className="space-y-4">
-              <div className="bg-gradient-to-r from-green-500 to-green-600 p-5 rounded-lg text-white">
-                <h3 className="font-bold text-xl mb-2">🏆 Kualitas Premium</h3>
-                <p className="text-green-50">Arang dengan tingkat karbon tinggi dan daya bakar optimal untuk berbagai kebutuhan industri dan rumah tangga.</p>
-              </div>
+              <div className="space-y-5 max-w-2xl">
+                <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                  <h3 className="font-bold text-2xl mb-2">🏆 Kualitas Premium</h3>
+                  <p className="text-green-50 text-lg">Arang dengan tingkat karbon tinggi dan daya bakar optimal untuk berbagai kebutuhan industri dan rumah tangga.</p>
+                </div>
 
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-5 rounded-lg text-white">
-                <h3 className="font-bold text-xl mb-2">🌍 Ramah Lingkungan</h3>
-                <p className="text-blue-50">Diproduksi dengan metode berkelanjutan dan bahan baku terbarukan untuk menjaga kelestarian alam.</p>
-              </div>
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                  <h3 className="font-bold text-2xl mb-2">🌍 Ramah Lingkungan</h3>
+                  <p className="text-blue-50 text-lg">Diproduksi dengan metode berkelanjutan dan bahan baku terbarukan untuk menjaga kelestarian alam.</p>
+                </div>
 
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-5 rounded-lg text-white">
-                <h3 className="font-bold text-xl mb-2">📦 Kemasan Profesional</h3>
-                <p className="text-orange-50">Tersedia dalam berbagai ukuran kemasan sesuai kebutuhan, dari retail hingga industrial scale.</p>
-              </div>
+                <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                  <h3 className="font-bold text-2xl mb-2">📦 Kemasan Profesional</h3>
+                  <p className="text-orange-50 text-lg">Tersedia dalam berbagai ukuran kemasan sesuai kebutuhan, dari retail hingga industrial scale.</p>
+                </div>
 
-              <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-5 rounded-lg text-white">
-                <h3 className="font-bold text-xl mb-2">🚚 Pengiriman Terpercaya</h3>
-                <p className="text-purple-50">Jaringan distribusi luas ke seluruh Indonesia dan ekspor internasional dengan layanan tepat waktu.</p>
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6 rounded-xl text-white shadow-xl transform hover:scale-105 transition-transform">
+                  <h3 className="font-bold text-2xl mb-2">🚚 Pengiriman Terpercaya</h3>
+                  <p className="text-purple-50 text-lg">Jaringan distribusi luas ke seluruh Indonesia dan ekspor internasional dengan layanan tepat waktu.</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Page 6 - Sertifikasi */}
-          <div className="page bg-white shadow-2xl p-10">
-            <h1 className="text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">SERTIFIKASI</h1>
-            
-            <div className="mt-8 space-y-6">
-              <div className="text-center mb-8">
-                <div className="inline-block bg-gradient-to-br from-yellow-400 to-yellow-600 text-white px-8 py-4 rounded-full text-2xl font-bold shadow-lg">
-                  ⭐ CERTIFIED QUALITY ⭐
+          <div className="page bg-white shadow-2xl p-10 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-yellow-100 to-transparent opacity-50"></div>
+            <div className="relative z-10">
+              <h1 className="text-5xl font-bold mb-6 text-gray-800 border-b-4 border-green-500 pb-3 inline-block">SERTIFIKASI</h1>
+              
+              <div className="mt-8 space-y-6">
+                <div className="text-center mb-10">
+                  <div className="inline-block bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-white px-10 py-5 rounded-2xl text-3xl font-bold shadow-2xl transform hover:scale-105 transition-transform">
+                    ⭐ CERTIFIED QUALITY ⭐
+                  </div>
                 </div>
-              </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200 flex items-center justify-center h-32">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">📜</div>
-                    <p className="font-bold text-gray-800">ISO 9001</p>
-                  </div>
+                <div className="rounded-xl overflow-hidden shadow-2xl mb-8">
+                  <img 
+                    src={certifications} 
+                    alt="Certifications" 
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
-                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200 flex items-center justify-center h-32">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🌿</div>
-                    <p className="font-bold text-gray-800">ISO 14001</p>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border-2 border-orange-200 flex items-center justify-center h-32">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">✅</div>
-                    <p className="font-bold text-gray-800">HALAL</p>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200 flex items-center justify-center h-32">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🏅</div>
-                    <p className="font-bold text-gray-800">SNI</p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="bg-green-600 text-white p-4 rounded-lg text-center mt-6">
-                <p className="font-semibold">Terdaftar dan Tersertifikasi Internasional</p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-7 rounded-2xl border-3 border-blue-300 flex items-center justify-center h-36 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-5xl mb-3">📜</div>
+                      <p className="font-bold text-gray-800 text-xl">ISO 9001</p>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-100 to-green-200 p-7 rounded-2xl border-3 border-green-300 flex items-center justify-center h-36 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-5xl mb-3">🌿</div>
+                      <p className="font-bold text-gray-800 text-xl">ISO 14001</p>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-7 rounded-2xl border-3 border-orange-300 flex items-center justify-center h-36 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-5xl mb-3">✅</div>
+                      <p className="font-bold text-gray-800 text-xl">HALAL</p>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-7 rounded-2xl border-3 border-purple-300 flex items-center justify-center h-36 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-5xl mb-3">🏅</div>
+                      <p className="font-bold text-gray-800 text-xl">SNI</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-5 rounded-xl text-center mt-8 shadow-xl">
+                  <p className="font-bold text-xl">Terdaftar dan Tersertifikasi Internasional</p>
+                </div>
               </div>
             </div>
           </div>
